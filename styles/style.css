@@ -6,17 +6,35 @@
 body {
     position: relative;
     background-color: teal;
+    height: 100vh;
 }
 
 img {
     display: block;
     margin: auto;
+    width: 35px;
 }
 
-.icon {
+.icon[data-option="myComputer"] {
     width: 75px;
     height: 75px;
     padding: 30px 0 0 0;
+    position: absolute;
+}
+
+.icon[data-option="explorer"] {
+    width: 75px;
+    height: 75px;
+    padding: 30px 0 0 0;
+    position: fixed;
+    top: 80px;
+}
+.icon[data-option="bin"] {
+    width: 75px;
+    height: 75px;
+    padding: 30px 0 0 0;
+    position: absolute;
+    top: 170px;
 }
 
 .iconDescription {
@@ -25,8 +43,4 @@ img {
     color: white;
     text-align: center;
     padding-top: 10px;
-}
-
-.icon[data-option="myComputer"] {
-    background-color: black;
 }

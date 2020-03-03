@@ -1,38 +1,26 @@
-const div = document.querySelector('div');
-let divX = 150;
-let divY = 50;
-div.style.left = divX + "px";
-div.style.top = `${divY}px`;
+const computerIcon = document.querySelector("body > div:nth-child(1)")
+const computerPng = document.querySelector("body > div:nth-child(1) > img")
 
-let drawActive = false;
+ let divX = 0;
+ let divY = 0;
 
-let insertDivX;
-let insertDivY;
+computerIcon.style.left = `${divX}px`
+computerIcon.style.top = `${divY}px`
 
-div.addEventListener('mousedown', (e) => {
- div.style.backgroundColor = "gray";
- drawActive = !drawActive;
- // drawActive = true;
 
- insertDivX = e.offsetX;
- insertDivY = e.offsetY;
- console.log(insertDivX, insertDivY);
+
+
+computerIcon.addEventListener('mousedown', () => {
+    // computerPng.style.background = "blue";
+})
+computerIcon.addEventListener('mousemove', (e) => {
+    console.log('ruch');
+    divX = e.clientX;
+    divY = e.clientY;
+    computerIcon.style.left = `${divX - 50}px`
+    computerIcon.style.right = `${divY - 50}px`
 
 })
-
-div.addEventListener('mousemove', (e) => {
- if (drawActive) {
-
-
-  divX = e.clientX - insertDivX;
-  divY = e.clientY - insertDivY;
-  div.style.left = `${divX}px`;
-  div.style.top = `${divY}px`;
- }
-})
-
-div.addEventListener('mouseup', () => {
- div.style.backgroundColor = "black";
- drawActive = !drawActive;
- // drawActive = false;
+computerIcon.addEventListener('mouseup', () => {
+    console.log('puscilem');
 })

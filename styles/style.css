@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background-color: teal;
+}
+
+img {
+    display: block;
+    padding: 20px;
+}
